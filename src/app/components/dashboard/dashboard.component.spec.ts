@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SaveListComponent } from './save-list.component';
+import { DashboardComponent } from './dashboard.component';
 
-describe('SaveListComponent', () => {
-  let component: SaveListComponent;
-  let fixture: ComponentFixture<SaveListComponent>;
+describe('DashboardComponent', () => {
+  let component: DashboardComponent;
+  let fixture: ComponentFixture<DashboardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SaveListComponent ]
+      declarations: [ DashboardComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SaveListComponent);
+    fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

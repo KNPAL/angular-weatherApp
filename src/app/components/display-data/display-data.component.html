@@ -1,23 +1,20 @@
 
-<div class="container " >
-   
-    <div class="row">
-        latitude {{weatherData.coord.lat}}
-        longitude {{weatherData.coord.lon}}
-    </div>
-    <div class="row">
-        humidity {{weatherData.main.humidity}}
-        pressure {{weatherData.main.pressure}}
-        temp {{weatherData.main.temp}}
-        temp_max{{weatherData.main.temp_max}}
-        temp_main{{weatherData.main.temp_main}}
-    </div>
-    <div class="row">
-      
-        <label>sunrise {{weatherData.sys.sunrise}}</label>
-        <label>sunset {{weatherData.sys.sunrise}}</label>
-    </div>
-<div>
-    <button *ngIf="!!weatherData" class="btn" (click)="onSaveClick()"> Save as Profile</button>
-</div>
+ <div class="container p-4" *ngIf="weatherData">
+  <div class="row justify-content-between">
+      <div class="col-md-6 mt-2">
+        
+          <div class="card border-secondary">
+              <div class="card-header">Wether Information</div>
+              <div class="card-body">
+                  <h4 class="card-title">Name: {{weatherData.name}}</h4>
+                  <p class="card-text">Latitud :{{weatherData.coord.lat}}</p>
+                  <p class="card-text">Longitud: {{weatherData.coord.lon}}</p>
+                  <p class="card-text">Humedad: {{weatherData.main.humidity}}</p>
+                  <p class="card-text">Presión: {{weatherData.main.pressure}}</p>
+                  <p class="card-text">Temperatura: {{weatherData.main.temp}} °C</p>
+                  <p class="card-text">Descripción: {{weatherData.weather[0].description }}</p>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>

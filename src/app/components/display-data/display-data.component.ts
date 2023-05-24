@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CommonDataService } from 'src/app/Service/common-data.service';
 
 @Component({
   selector: 'app-display-data',
@@ -8,10 +9,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DisplayDataComponent implements OnInit {
 
   @Input() weatherData!: any;
-  constructor() { }
+  constructor(private commonDataService: CommonDataService) {
+    
+  }
 
 
   ngOnInit(): void {
+    console.log(!!this.weatherData.length)
   }
 
   onSaveClick():void{

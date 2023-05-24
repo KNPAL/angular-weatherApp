@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class HTTPInterceptor implements HttpInterceptor {
   API_key='225012b5e782cc243a2be3224cec5ba4';
   constructor() {
-
+    
   }
 
   intercept(
@@ -22,6 +22,5 @@ export class HTTPInterceptor implements HttpInterceptor {
       headers: request.headers.set('appid',this.API_key),
     });
     return next.handle(tokenizedReq);
-
   }
 }

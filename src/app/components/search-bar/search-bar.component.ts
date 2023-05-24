@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonDataService } from 'src/app/Service/common-data.service';
+import { HttpCommonService } from 'src/app/Service/http-common.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -8,7 +9,7 @@ import { CommonDataService } from 'src/app/Service/common-data.service';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor(private commonDataService: CommonDataService) { }
+  constructor(private commonDataService: CommonDataService, private httpCommonService:HttpCommonService) { }
   searchText: String = '';
 
   ngOnInit(): void {
@@ -59,7 +60,11 @@ export class SearchBarComponent implements OnInit {
       "cod": 200
     };
     if (!!this.searchText) {
-      alert(this.searchText)
+      this.httpCommonService
+      .get(`https://api.openweathermap.org/data/2.5/weather?q=${this.searchText}`)
+      .subscribe(x=>{
+        console.log(x)
+      })
       this.commonDataService.currentSearchObjSubject.next(appWeather);
     }
   }
