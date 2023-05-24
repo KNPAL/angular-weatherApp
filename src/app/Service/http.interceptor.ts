@@ -9,9 +9,9 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class HTTPInterceptor implements HttpInterceptor {
-  API_key='225012b5e782cc243a2be3224cec5ba4';
+  API_key = '225012b5e782cc243a2be3224cec5ba4';
   constructor() {
-    
+
   }
 
   intercept(
@@ -19,7 +19,9 @@ export class HTTPInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     const tokenizedReq = request.clone({
-      headers: request.headers.set('appid',this.API_key),
+      headers: request.headers
+        .set('appid', this.API_key)
+        .set('Access-Control-Allow-Origin', '*'),
     });
     return next.handle(tokenizedReq);
   }
