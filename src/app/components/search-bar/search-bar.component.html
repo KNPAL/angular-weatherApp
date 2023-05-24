@@ -1,1 +1,4 @@
-<p>search-bar works!</p>
+<div class="d-flex m-1">
+    <input [(ngModel)]="searchText"  class="form-control w-75 mx-2" />
+    <button class="btn btn-primary mx-2" (click)="onSearchClick()">Search</button>
+</div>

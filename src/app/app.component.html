@@ -1,15 +1,28 @@
 <div class="container my-4">
-  <div style="height:50px;min-height:25px" class="row border" >
+  <div class=" d-flex">
+    
+      <span class="border m-2 p-2">
+        dashboard
+      </span>
+      <span  routerLink="/profiles" class="border m-2 p-2">
+        profile
+      </span>
+      <span  routerLink="/saveLists" class="border m-2 p-2">
+        save list
+      </span>
+      
+  </div>
+  <div style="height:50px;min-height:25px" class="row" >
     <app-search-bar></app-search-bar>
   </div>
   <div style="height:400px;min-height:300px"  class="row">
-    <div class="col-md-6 border">
-      <app-display-data></app-display-data>
+    <div class=" border">
+      <app-display-data [weatherData]="wData"></app-display-data>
     </div>
-    <div class="col-md-6 border"><app-save-list></app-save-list></div>
+    <!-- <div class="col-md-6 border"><app-save-list></app-save-list></div> -->
   </div>
-  <div style="height:200px;min-height:150px" class="row border">
+  <!-- <div style="height:200px;min-height:150px" class="row border">
     <app-profile></app-profile>
-  </div>
+  </div> -->
 </div>
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet>

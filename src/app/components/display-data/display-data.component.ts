@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-display-data',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayDataComponent implements OnInit {
 
+  @Input() weatherData!: any;
   constructor() { }
 
+
   ngOnInit(): void {
+  }
+
+  onSaveClick():void{
+    alert('save')
   }
 
 }

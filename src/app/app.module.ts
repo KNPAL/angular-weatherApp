@@ -7,6 +7,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { SaveListComponent } from './components/save-list/save-list.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DisplayDataComponent } from './components/display-data/display-data.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DisplayDataComponent } from './components/display-data/display-data.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

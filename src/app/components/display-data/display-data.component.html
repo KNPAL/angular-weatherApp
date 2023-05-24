@@ -1,1 +1,23 @@
-<p>display-data works!</p>
+
+<div class="container " >
+   
+    <div class="row">
+        latitude {{weatherData.coord.lat}}
+        longitude {{weatherData.coord.lon}}
+    </div>
+    <div class="row">
+        humidity {{weatherData.main.humidity}}
+        pressure {{weatherData.main.pressure}}
+        temp {{weatherData.main.temp}}
+        temp_max{{weatherData.main.temp_max}}
+        temp_main{{weatherData.main.temp_main}}
+    </div>
+    <div class="row">
+      
+        <label>sunrise {{weatherData.sys.sunrise}}</label>
+        <label>sunset {{weatherData.sys.sunrise}}</label>
+    </div>
+<div>
+    <button *ngIf="!!weatherData" class="btn" (click)="onSaveClick()"> Save as Profile</button>
+</div>
+</div>
