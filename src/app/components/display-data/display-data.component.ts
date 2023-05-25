@@ -19,6 +19,7 @@ export class DisplayDataComponent implements OnInit {
   }
 
   onSaveClick():void{
+    console.log(this.weatherData)
     alert('save')
   }
 

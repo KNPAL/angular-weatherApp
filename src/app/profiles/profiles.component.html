@@ -1,1 +1,19 @@
-<p>profiles works!</p>
+<div class="container p-4">
+    <div class="row justify-content-between">
+        <ng-container *ngFor="let profile of profileList">
+            <div class="col-md-6 mt-2">
+                <div class="card border-secondary">
+                    <div class="card-header">{{profile?.name}}</div>
+                    <!-- <div class="card-body">
+                        <p class="card-text">Latitud :{{weatherData?.coord?.lat}}</p>
+                        <p class="card-text">Longitud: {{weatherData?.coord?.lon}}</p>
+                        <p class="card-text">Humedad: {{weatherData?.main?.humidity}}</p>
+                        <p class="card-text">Presión: {{weatherData?.main?.pressure}}</p>
+                        <p class="card-text">Temperatura: {{weatherData?.main?.temp}} °C</p>
+                         <p class="card-text">Descripción: {{weatherData?.weather[0]?.description }}</p> 
+                    </div> -->
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
