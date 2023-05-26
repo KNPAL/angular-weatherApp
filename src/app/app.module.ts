@@ -24,7 +24,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HttpClientModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: HTTPInterceptor, multi: true }
+   // { provide: HTTP_INTERCEPTORS, useClass: HTTPInterceptor, multi: true }
 
   ],
   bootstrap: [AppComponent]

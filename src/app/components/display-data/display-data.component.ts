@@ -15,12 +15,11 @@ export class DisplayDataComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(!!this.weatherData.length)
   }
 
   onSaveClick():void{
     console.log(this.weatherData)
-    alert('save')
+    this.commonDataService.setProfileList(this.weatherData)
   }
 
 }

@@ -24,7 +24,6 @@ export class HTTPInterceptor implements HttpInterceptor {
         .set('appid', this.API_key)
         .set('Access-Control-Allow-Origin', '*')
         .set('Content-Type','application/json'),
-
     });
     return next.handle(tokenizedReq);
   }

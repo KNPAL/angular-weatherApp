@@ -1,18 +1,18 @@
 
- <div class="container p-4" >
+ <div class="container p-4" *ngIf="weatherData">
   <div class="row justify-content-between">
       <div class="col-md-6 mt-2">
         
           <div class="card border-secondary">
               <div class="card-header">Wether Information</div>
-              <div class="card-body" *ngIf="weatherData">
+              <div class="card-body">
                   <h4 class="card-title">Name: {{weatherData?.name}}</h4>
                   <p class="card-text">Latitud :{{weatherData?.coord?.lat}}</p>
                   <p class="card-text">Longitud: {{weatherData?.coord?.lon}}</p>
                   <p class="card-text">Humedad: {{weatherData?.main?.humidity}}</p>
                   <p class="card-text">Presión: {{weatherData?.main?.pressure}}</p>
                   <p class="card-text">Temperatura: {{weatherData?.main?.temp}} °C</p>
-                  <!-- <p class="card-text">Descripción: {{weatherData?.weather[0]?.description }}</p> -->
+                  <p class="card-text">Descripción: {{weatherData?.weather[0]?.description }}</p>
               </div>
           </div>
           <button class="my-4 btn btn-primary" (click)="onSaveClick()">Save as profile</button>
